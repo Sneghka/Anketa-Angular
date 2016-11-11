@@ -11,21 +11,18 @@
         <p>4.Выберите любимого котика</p>
         <div class="img-holder">
             <ul>
-                <li ng-repeat="img in images"   ng-class="{hasBorder: $index == indexSelectedImage}" ng-click="changeBorder($index)" ng-model="">
-                    <img ng-src="{{img.src}}" alt="{{img.alt}}" ng-click="choseImage($index)" / >
+                <li ng-repeat="img in images" ng-class="{hasBorder: $index == indexSelectedImage}" ng-click="changeBorder($index)">
+                    <img ng-src="{{img.src}}" alt="{{img.alt}}" ng-click="choseImage($index)" />
                 </li>
             </ul>
-             <span ng-show="selectedImage.alt == 'dog' "> - Вы выбрали собачку. А надо котика</span>
-        </div>     
-        
+            <span ng-show="selectedImg.alt == 'dog' "> - Вы выбрали собачку. А надо котика</span>
+        </div>
     </div>
     <div class="next-previous">
         <a ui-sref="form.step3">
             <button class="previous"> &#x276e; Предыдущий</button>
         </a>
         <a ui-sref="form.submission_preview">
-            <button class="next" id="submit" ng-disabled = "!isEnable">Завершить</button>
-        </a>        
+            <button class="next" id="submit" ng-disabled="!isEnable">Завершить</button>
+        </a>
     </div>
-   
-         

@@ -187,6 +187,10 @@ input[type="checkbox"]:checked + label span {
     width: 600px;
     margin-bottom: 32px;
 }
+.preview img {
+    left: -40px;
+    position: relative;
+}
 
 .user-info {
     float:left;
@@ -246,6 +250,7 @@ input[type="checkbox"]:checked + label span {
 .has-error span, .step4 span {
     color: red;  
     font-size: 12px;
+    display: block;
     
 }
 .step4  .ng-hide:not(.ng-hide-animate) {

@@ -67,7 +67,7 @@ angular.module('myApp', ['ui.router'])
                 link: ""
             }
         ];
-  
+
         $scope.selectSocial = function () {
             $scope.selectedSocialList = $filter('filter')($scope.social, {
                 checked: true
@@ -84,7 +84,6 @@ angular.module('myApp', ['ui.router'])
                         name: countries[key]
                     };
                     $scope.countries.push(item);
-                    /* console.log(key + " -> " + countries[key]);*/
                 }
             }
         }, function () {
@@ -140,13 +139,10 @@ angular.module('myApp', ['ui.router'])
             $scope.selectedImg = $scope.images[index];
         };
 
-
-        $scope.selectedImage = {};
         $scope.indexSelectedImage = {};
         $scope.changeBorder = function (index) {
-            $scope.selectedImage = $scope.images[index];
             $scope.indexSelectedImage = index;
-            $scope.isEnable = $scope.selectedImage.alt == 'cat' ? true : false;
+            $scope.isEnable = $scope.selectedImg.alt == 'cat' ? true : false;
 
         };
 
@@ -156,20 +152,19 @@ angular.module('myApp', ['ui.router'])
                 name: "",
                 email: "",
                 selectedCountry: "",
-                selectedCity: "",
-                selectedSocialList: [],
-                selectedImage: {}
+                selectedCity: ""
             };
-            
-            for(var i=0; i <$scope.social.length; i++){
+
+            for (var i = 0; i < $scope.social.length; i++) {
                 $scope.social[i].checked = false;
                 $scope.social[i].link = "";
             }
-            var parentSelectedImg = angular.element(document.querySelector('.hasBorder'));
-            parentSelectedImg.removeClass('.hasBorder');
-            
+
+             $scope.selectedSocialList = {};
             $scope.indexSelectedImage = undefined;
+            $scope.selectedImg = {};
             $scope.myForm.$setPristine();
+            $scope.isEnable = false;
         };
 
     });
