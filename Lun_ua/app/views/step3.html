@@ -1,0 +1,30 @@
+<div class="main-wrapper step3">
+    <header>
+        <ul>
+            <li style="color: #ff9800">1</li>
+            <li style="color: #ff9800">2</li>
+            <li class="active">3</li>
+            <li>4</li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <p>3.Отметьте социальные сети</p>
+
+        <div class="checkbox" ng-repeat="s in social">
+            <input type="checkbox" id="{{s.id}}" ng-model="s.checked" ng-change="selectSocial()">
+            <label for="{{s.id}}" ng-click="checked = !checked"><span></span>{{s.name}}</label>
+            <input type="text" ng-model="s.link" ng-show="s.checked" >           
+        </div>
+
+
+    </div>
+    <div class="next-previous">
+        <a ui-sref="form.step2">
+            <button class="previous"> &#x276e; Предыдущий</button>
+        </a>
+        <a ui-sref="form.step4">
+            <button class="next">Следующий &#x276f;</button>
+        </a>
+    </div>
+</div>

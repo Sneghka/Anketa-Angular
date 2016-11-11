@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+    background: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+.main-wrapper {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+header ul {
+    list-style: none;
+    margin-bottom: 16px;
+}
+header ul li {
+    display: inline-block;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 5px;
+    color: #aba9a9;
+}
+header ul li.active {
+    color: #000;
+}
+.content>p {
+    margin-bottom: 40px;
+}
+.step1 .content input, .step2 .content select {
+    display: block;
+    border-radius: 2px;
+    width: 200px;
+    height: 40px;
+    padding: 0;
+    line-height: 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+    padding: 2px;
+    box-sizing: border-box;
+  
+}
+.step1 .content input:nth-child(2), .step2 .content select:nth-child(2){
+    margin-bottom: 16px;
+}
+.step1 .content input:nth-child(3), .step2 .content select:nth-child(3)
+/*.content *:last-child*/{
+    margin-bottom: 150px;
+}
+.next-previous a, footer a:hover {
+    text-decoration: none;    
+}
+.next-previous a div {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #ff9800;
+    display: inline-block;
+    cursor: pointer;
+    background: #fff;
+    padding: 5px;
+}
+.previous {
+    margin-right: 16px;
+}
+
+select:invalid {
+    color: #bbbbbb;
+}
+
+/**************Step3************/
+
+.step3 input[type="text"]{
+    margin-left: 50px;
+}
+.step3 .checkbox:nth-child(4) input[type="text"]{
+    margin-left: 70px;
+}
+.step3 .checkbox input:nth-child(3){
+   border-color: transparent;
+     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);  
+    height: 30px;
+    width: 250px;
+}
+.checkbox {
+    margin-bottom: 15px;
+}
+.step3 .checkbox:last-child{
+    margin-bottom: 117px;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:#fff;
+    cursor:pointer;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/checkbox_checked.png);
+    background-size: cover;
+    
+}

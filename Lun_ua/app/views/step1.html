@@ -1,0 +1,31 @@
+<div class="main-wrapper step1">
+    <header>
+        <ul>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </header>
+
+    <div class="content" ng-class="{ 'has-error' : myForm.user.name.$error.required && !myForm.user.name.$pristine }">
+        <p>1.Введите имя и email</p>
+        <div class="content" ng-class="{ 'has-error' : myForm.userName.$error.required && !myForm.userName.$pristine }">
+            <input type="text" name="userName" id="name" placeholder="Имя" ng-model="user.name" required>
+            <span ng-show="myForm.userName.$error.required && !myForm.userName.$pristine" class="help-box"> - Поле обязательно для заполнения.</span>
+        </div>
+        <div ng-class="{ 'has-error has-feedback' : myForm.email.$invalid && !myForm.email.$pristine }">
+            <input type="email" id="email" placeholder="Email" ng-model="user.email" name="email" required>
+            <span ng-show="(myForm.email.$invalid ||myForm.email.$error.required) &&!myForm.email.$pristine" class="help-block"> - в адресе должен быть символ "@"</span>
+        </div>
+
+
+        <div class="next-previous">
+            <a ui-sref="form.step1">
+                <button class="previous"> &#x276e; Предыдущий</button>
+            </a>
+            <a ui-sref="form.step2">
+                <button class="next" ng-disabled="myForm.$invalid">Следующий &#x276f;</button>
+            </a>
+        </div>
+    </div>

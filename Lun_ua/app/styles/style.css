@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+    background: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+ul {
+    list-style: none;
+}
+.main-wrapper {
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+header ul {   
+    margin-bottom: 16px;
+}
+header ul li {
+    display: inline-block;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 5px;
+    color: #aba9a9;
+}
+header ul li.active {
+    color: #000;
+}
+.content>p {
+    margin-bottom: 40px;
+}
+.step1 .content input, .step2 .content select {
+    display: block;
+    border-radius: 2px;
+    width: 200px;
+    height: 40px;
+    padding: 0;
+    line-height: 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
+    padding: 2px;
+    box-sizing: border-box;
+  
+}
+option.placeholder {
+    color: #bbb;
+}
+.step1 .content div:nth-child(2), .step2 .content select:nth-child(2){
+    margin-bottom: 16px;
+}
+.step1 .content input, .step1 .content span {
+    display: inline;
+   
+}
+.step1 .next-previous {
+    margin-top: 150px;
+}
+
+.step1 .content input:nth-child(3), .step2 .content select:nth-child(3)
+{
+    margin-bottom: 150px;
+}
+.next-previous a, footer a:hover {
+    text-decoration: none;    
+}
+.next-previous a button {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #ff9800;
+    display: inline-block;
+    cursor: pointer;
+    background: #fff;
+    padding: 5px;
+    border: none;
+}
+.previous {
+    margin-right: 16px;
+}
+
+select:invalid {
+    color: #bbbbbb;
+}
+
+/**************Step3************/
+
+/*.step3 input[type="text"]{
+    margin-left: 50px;
+}*/
+.step3 .checkbox:nth-child(4) input[type="text"]{
+    margin-left: 70px;
+}
+.step3 .checkbox input:nth-child(3){
+   border-color: transparent;
+     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);  
+    height: 30px;
+    width: 250px;
+}
+.checkbox {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 36px;
+}
+.step3 .checkbox:last-child{
+    margin-bottom: 57px;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:#fff;
+    cursor:pointer;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/checkbox_checked.png);
+    background-size: cover;    
+}
+
+
+/***************STEP4******************/
+
+.step4 .content li {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;   
+     margin-right: 8px;
+    border: 4px solid transparent;
+   
+}
+.step4 img {   
+   height: 100%;
+    position:relative;
+    left: -30px;
+    cursor: pointer;
+    
+   
+}
+.img-holder {
+    width: 700px;
+    position: relative;
+    left: -100px;
+    margin-bottom: 83px;
+}
+
+.noBorder {
+     border: 4px solid transparent;       
+}
+.step4 .content li.hasBorder {
+    border: 4px solid #ff9800;
+    }
+
+#submit {
+    background:  #ff9800;
+    color: #fff;
+    font-weight: bolder;
+    width: 109px;
+    text-align: center;
+}
+
+/*************PREVIEW************/
+.preview {
+    background: #fff;
+    position: relative;   
+    overflow: hidden;
+    width: 600px;
+    margin-bottom: 32px;
+}
+
+.user-info {
+    float:left;
+    padding: 20px;
+}
+.user-image {
+    float: right;
+    width: 200px;
+    height: 195px;
+    position: relative;
+    top: 50%;
+    overflow: hidden;
+    margin: 24px;
+    }
+
+.user-image img {
+    height: 100%;    
+}
+
+.next-previous{
+    clear: both;
+}
+.name {
+    font-size: 20px;
+    font-weight: 600;   
+}
+.email {
+    margin-bottom: 40px;
+}
+
+.next-previous.submit #submit{
+    position: relative;
+    left: 250px;
+    width: 119px;
+}
+.user-info div:nth-child(4) {
+    position: absolute;
+    bottom: 10px;
+}
+.social span{
+    color: #0000ff;
+    padding-right: 5px;
+}
+
+
+
+.color {
+    color: red;
+}
+
+
+.cbalink {
+    display: none;
+}
+
+
+.has-error span, .step4 span {
+    color: red;  
+    font-size: 12px;
+    
+}
+.step4  .ng-hide:not(.ng-hide-animate) {
+    display: block !important;
+    visibility: hidden !important;
+}

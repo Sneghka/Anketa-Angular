@@ -1,0 +1,20 @@
+<div class="preview">
+    <div class="user-info">
+        <div class="name">{{user.name}}</div>
+        <div class="email">{{user.email}}</div>
+        <div iclass="adress">{{user.selectedCity}},{{user.selectedCountry.name}}</div>
+        <div>
+            <ul class="social">
+                <li ng-repeat="s in selectedSocialList"><span>{{s.name}}:</span> {{s.link}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="user-image"> <img ng-src="{{selectedImg.src}}" alt="{{selectedImg.alt}}"></div>
+</div>
+
+
+<div class="next-previous submit">
+    <a ui-sref="form.step1">
+        <button class="next" id="submit" ng-click="submitForm()">Пройти заново</button>
+    </a>
+</div>

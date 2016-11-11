@@ -1,0 +1,49 @@
+
+    <div class="main-wrapper step3">
+      <header>
+            <ul>
+                <li style = "color: #ff9800">1</li>
+                <li style = "color: #ff9800">2</li>
+                <li class="active">3</li>
+                <li>4</li>
+            </ul>
+        </header>
+       
+        <div class="content">
+            <p>3.Отметьте социальные сети</p>
+            <div class="checkbox">
+            <input type="checkbox" name="" value="facebook" id="facebook" ng-model="checkBoxModel.facebook">
+            <label for="facebook"><span></span>Facebook</label>
+            <input type="text" id= "facebookUrl" ng-model="facebookUrl">
+            </div>
+             <div class="checkbox">
+           <input type="checkbox" name="" value="vkontakte" id= "vkontakte" ng-model = "checkBoxModel.vkontakte">
+           <label for="vkontakte"><span></span>Вконтакте</label>           
+           </div>
+            <div class="checkbox">
+            <input type="checkbox" name="" value="twitter" id="twitter" ng-model = "checkBoxModel.twitter">
+            <label for="twitter"><span></span>Twitter</label>
+            <input type="text" id= "twitterUrl" ng-model="twitterUrl">
+            </div>
+            <div class="checkbox">
+            <input type="checkbox" name="odnoklassiniki" id="odnoklassiniki" ng-model ="checkBoxModel.odnoklassniki">
+            <label for="odnoklassiniki"><span></span>Одноклассники</label>
+             </div>            
+             
+        </div>
+        <div class="next-previous">
+            <a ui-sref="form.step2">
+                <div class="previous"> &#x276e; Предыдущий</div>
+            </a>
+            <a ui-sref="form.step4">
+                <div class="next">Следующий &#x276f;</div>
+            </a>
+        </div>
+        <div class="test">
+           <p>Your name: {{user.name}}</p>
+            <p>Your email: {{user.email}}</p>
+            <p>Your country: {{user.country}}</p>
+            <p>Your city: {{user.city}}</p>
+            <p>checkbox.value 1 : {{checkBoxModel.facebook}}</p>
+        </div>
+    </div>

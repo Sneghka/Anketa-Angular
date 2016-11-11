@@ -1,0 +1,31 @@
+<div class="main-wrapper step2">
+    <header>
+        <ul>
+            <li style="color: #ff9800">1</li>
+            <li class="active">2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </header>
+    <div class="content">
+        <p>2.Выберите страну и город</p>
+        <!--<select ng-model="user.selectedCountry" name="" id="" ng-options="country.id as country.name for country in countries">-->
+           <select ng-model="user.selectedCountry" name="" id="" ng-options="country.name for country in countries track by country.id">
+            <option class="placeholder" value='' disabled>Страна</option>
+        </select>
+        <select ng-model="user.selectedCity" name="" id="" ng-options="city.name as city.name for city in cities | filter: { countryID: user.selectedCountry.id } : filterByCountry">
+            <option class="placeholder" value='' disabled>Город</option>
+        </select>
+
+
+    </div>
+    <div class="next-previous">
+        <a ui-sref="form.step1">
+            <button class="previous"> &#x276e; Предыдущий</button>
+        </a>
+        <a ui-sref="form.step3">
+            <button class="next">Следующий &#x276f;</button>
+        </a>
+    </div>
+   
+</div>

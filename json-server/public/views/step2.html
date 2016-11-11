@@ -1,0 +1,41 @@
+
+    <div class="main-wrapper step2">
+        <header>
+            <ul>
+                <li style = "color: #ff9800">1</li>
+                <li  class="active">2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </header>
+        <div class="content">
+            <p>2.Выберите страну и город</p>
+            <select name="" id="country" required ng-model="user.country">
+               <option value="" disabled selected>Страна</option>
+                <option value="Ukraine" >Ukraine</option>
+                <option value="France" >France</option>
+                <option value="USA" >USA</option>
+            </select>
+            <select name="" id="city" required ng-model="user.city">
+               <option value="" disabled selected>Город</option>
+                <option value="Ukraine" >Ukraine</option>
+                <option value="France">France</option>
+                <option value="USA" >USA</option>
+            </select>
+        </div>
+        <div class="next-previous">
+            <a ui-sref="form.step1">
+                <div class="previous"> &#x276e; Предыдущий</div>
+            </a>
+            <a ui-sref="form.step3">
+                <div class="next">Следующий &#x276f;</div>
+            </a>
+        </div>
+        <div class="test">
+            <h3>Your name: {{user.name}}</h3>
+            <h3>Your email: {{user.email}}</h3>
+            <h3>Your country: {{user.country}}</h3>
+            <h3>Your city: {{user.city}}</h3>
+        </div>
+    </div>
+

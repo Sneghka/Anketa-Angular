@@ -1,0 +1,32 @@
+
+    <div class="main-wrapper step1">
+      <header>
+            <ul>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </header>
+       
+        <div class="content">
+            <p>1.Введите имя и email</p>
+            <input type="text" id="name" placeholder="Имя" required ng-model = "user.name">
+            <input type="email" id="email" placeholder="example@example.com" required ng-model = "user.email">
+        </div>
+        <div class="next-previous">
+            <a ui-sref="form.step1">
+                <div class="previous"> &#x276e; Предыдущий</div>
+            </a>
+            <a ui-sref="form.step2">
+                <div class="next">Следующий &#x276f;</div>
+            </a>
+        </div>
+        <div class="test">
+          <h2>Countries: {{countries}}</h2>
+           <h3>Your name: {{user.name}}</h3>
+            <h3>Your email: {{user.email}}</h3>
+            <h3>Your country: {{user.country}}</h3>
+            <h3>Your city: {{user.city}}</h3>
+        </div>
+    </div>
